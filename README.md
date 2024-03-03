@@ -3,11 +3,9 @@
 The Linguamorph software was created by Arno Klein (binarybottle.com) 
 and is intended to process/morph language, including variations in sound and stress.
 
-LinguaLearn language learning tools are the primary intended application
-(see documentation at the top of the command-line program lingualearn.py).
+Potential applications include:
 
-Other potential applications include:
-
+  - language learning (see lingualearn)
   - homophone phrases (variations that sound the same or similar)
   - extreme alliteration
   - spoonerism-style scrambles
