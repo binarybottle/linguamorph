@@ -32,7 +32,6 @@ Output for different dictionaries:
 Copyright 2021-2023, Arno Klein, MIT License
 
 '''
-import pickle
 import nltk
 import re
 import language_tool_python

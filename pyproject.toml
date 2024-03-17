@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "linguamorph"
+version = "0.1.0"
+description = "Morph text"
+authors = ["Arno Klein <binarybottle@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+argparse = "^1.4.0"
+caribe = "^0.9.2"
+openai = "^1.14.1"
+g2p-en = "^2.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

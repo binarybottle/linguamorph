@@ -4,9 +4,6 @@ Main program to run Linguamorph language morphing software.
 
 Ex: python linguamorph.py -mh 'pair of shoes' -l words
 
-- See lingualearn.py for the LinguaLearn language learning application.
-- See the README.md file for more information about phonemes.
-
 Copyright 2023, Arno Klein, MIT License
 
 '''
@@ -14,7 +11,6 @@ import argparse
 from process_phonemes import phoneme_list, consonant_list, words_to_sounds, separate_consonants, generate_homophones
 from check_grammar import check_grammar_twice, grammar_tool, grammar_tool2
 from io_files import display_save_output
-from speak import text_to_speech
 
 #-----------------------------------------------------------------------------                                              
 # Command-line arguments                                                                                               
@@ -24,7 +20,6 @@ parser = argparse.ArgumentParser(description="""
                      formatter_class = lambda prog:
                      argparse.HelpFormatter(prog, max_help_position=40))
 parser.add_argument('text', type=str, help='Enter a string of text')
-parser.add_argument("-s", "--speak", action='store_true', help="Say the input text out loud")
 parser.add_argument("-mh", "--make_homophones", action='store_true', help="Make homophones (same sounds)")
 parser.add_argument("-mc", "--make_consonances", action='store_true', help="Make consonances (same consonants)")
 parser.add_argument("-mp", "--make_permutations", action='store_true', help="Make consonant permutations")
@@ -35,7 +30,6 @@ parser.add_argument("-q", "--quiet", action='store_true', help="Do not generate 
 args = parser.parse_args()
 
 input_text = args.text
-do_speak = args.speak
 do_homophones = args.make_homophones 
 do_consonances = args.make_consonances 
 do_permutations = args.make_permutations 
@@ -92,9 +86,6 @@ verbose2 = False
 #-----------------------------------------------------------------------------                                              
 if verbose:
     print("Entered text: {0}".format(input_text))
-
-if do_speak:
-    text_to_speech(input_text)
 
 if ' ' in input_text.strip():
     words = input_text.split()
