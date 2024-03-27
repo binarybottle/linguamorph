@@ -19,6 +19,10 @@ Potential applications include:
   - rhyming/rapping
 
 
+linguamorph.py is the main program to run Linguamorph language morphing software.
+Ex: python linguamorph.py -mh 'pair of shoes' -l words
+
+
 ## Phonemes and Carnegie Mellon Pronouncing Dictionary
 
 This software makes use of different dictionaries as lexicons, but make primary use of [CMU's Pronouncing Dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict) [github](https://github.com/cmusphinx/cmudict/tree/4c6a365cea2c34340ffc218d5af7a38920fa7e37]). See below and the documents/ folder for more information about this dictionary:
